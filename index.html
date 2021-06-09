@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msvalidate.01" content="6CF0B36FDD509B2B5A14C6498706BB37" />
+    <!-- <meta name="robots" content="yes" />
+    <meta name="googlebot" content="yes" /> -->
+    <link rel="stylesheet" href="style.css">
+    <meta name="keywords" content="srm, university,srm university,gpa,calculator,gpa calculator,srm gpa calculator,srm result, srm btech result, 2015 regulation, 2013 regulation,srm gpa, CGPA Calculator, srm cgpa calculator, CGPA, gpa to percentage, eversity, srm evarsity, srm acadmeia, sudhanshu, sudhanshu gpa calculator, nirbhay, nirbhay gpa calculator, srm university cgpa calculator 2018,srm university cgpa calculator 2021,srm gpa to cgpa calculator,srm cgpa to percentage 2018 regulations,srm calculator,sgpa calculator for srm university,srm university grade conversion sheet,srm institute of science and technology gpa, credit, credit calculator,course,scrapsrmgpa, grade, grade point checker, grade calculator,achieved marks, achieved gpa, add, add your course">
+    <meta name="description" content="CGPA calculator designed in accordance with SRM Institute of Science and Technology. Use this calculator to calculate grade point average (GPA) and generate a GPA report. If you use percentage grades, have grades on a different ..."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="author" content="Sidhant">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#ff00ff" />
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="shortcut icon" href="data--scraping-22-512.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script data-ad-client="ca-pub-1559372104336086" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <title>SRM GPA Calculator</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154670027-1"></script>
+    <script src="script.js"></script>
+    
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-154670027-1');
+    </script>
+    
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h1 class="head text-center">SRM GPA Calculator</h1>
+
+        <div class="hidden" id="result">
+            <h2 id="result" class="text-center style">GPA: <strong><span id="gpa"></span></strong></h2>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                    <span class="sr-only"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <form class="form-inline" action="#">
+                <input type="reset" id="reset" class="hidden btn btn-danger btn-lg btn-block" onclick="resetall()">
+                <table class="table text-center">
+                    <tr>
+                        <th class=" heading text-center">Course #</th>
+                        <th class=" heading text-center">Credits</th>
+                        <th class="heading text-center">Grade Achieved</th>
+                    </tr>
+                    <!-- Row 1 -->
+                    <tr>
+                        <td><label for="cr1">1.</label></td>
+                        <td><input type="number" class="cred form-control" id="cr1" min=1></td>
+                        <td>
+                            <select class="opt form-control">
+                                <option>O</option>
+                                <option>A+</option>
+                                <option>A</option>
+                                <option>B+</option>
+                                <option>B</option>
+                                <option>C</option>
+                                <option>P</option>
+                                <option>F</option>
+                                <option>Ab</option>
+                                <option>I</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <!-- Row 2 -->
+                    <tr>
+                        <td><label for="cr2">2.</label></td>
+                        <td><input type="number" class="cred form-control" id="cr2" min=1></td>
+                        <td>
+                            <select class="opt form-control">
+                                <option>O</option>
+                                <option>A+</option>
+                                <option>A</option>
+                                <option>B+</option>
+                                <option>B</option>
+                                <option>C</option>
+                                <option>P</option>
+                                <option>F</option>
+                                <option>Ab</option>
+                                <option>I</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <!-- Option 3 -->
+                    <tr>
+                        <td><label for="cr3">3.</label></td>
+                        <td><input type="number" class="cred form-control" id="cr3" min=1></td>
+                        <td>
+                            <select class="opt form-control">
+                                <option>O</option>
+                                <option>A+</option>
+                                <option>A</option>
+                                <option>B+</option>
+                                <option>B</option>
+                                <option>C</option>
+                                <option>P</option>
+                                <option>F</option>
+                                <option>Ab</option>
+                                <option>I</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <!-- Row 4 -->
+                    <tr>
+                        <td><label for="cr4">4.</label></td>
+                        <td><input type="number" class="cred form-control" id="cr4" min=1></td>
+                        <td>
+                            <select class="opt form-control">
+                                <option>O</option>
+                                <option>A+</option>
+                                <option>A</option>
+                                <option>B+</option>
+                                <option>B</option>
+                                <option>C</option>
+                                <option>P</option>
+                                <option>F</option>
+                                <option>Ab</option>
+                                <option>I</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <!-- Row 5 -->
+                    <tr>
+                        <td><label for="cr5">5.</label></td>
+                        <td><input type="number" class="cred form-control" id="cr5" min=1></td>
+                        <td>
+                            <select class="opt form-control">
+                                <option>O</option>
+                                <option>A+</option>
+                                <option>A</option>
+                                <option>B+</option>
+                                <option>B</option>
+                                <option>C</option>
+                                <option>P</option>
+                                <option>F</option>
+                                <option>Ab</option>
+                                <option>I</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <!-- Row 6 -->
+                    <tr>
+                        <td><label for="cr6">6.</label></td>
+                        <td><input type="number" class="cred form-control" id="cr6" min=1></td>
+                        <td>
+                            <select class="opt form-control">
+                                <option>O</option>
+                                <option>A+</option>
+                                <option>A</option>
+                                <option>B+</option>
+                                <option>B</option>
+                                <option>C</option>
+                                <option>P</option>
+                                <option>F</option>
+                                <option>Ab</option>
+                                <option>I</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <!-- Row 7 -->
+                    <tr>
+                        <td><label for="cr7">7.</label></td>
+                        <td><input type="number" class="cred form-control" id="cr7" min=1></td>
+                        <td>
+                            <select class="opt form-control">
+                                <option>O</option>
+                                <option>A+</option>
+                                <option>A</option>
+                                <option>B+</option>
+                                <option>B</option>
+                                <option>C</option>
+                                <option>P</option>
+                                <option>F</option>
+                                <option>Ab</option>
+                                <option>I</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <!-- Row 8 -->
+                    <tr>
+                        <td><label for="cr8">8.</label></td>
+                        <td><input type="number" class="cred form-control" id="cr8" min=1></td>
+                        <td>
+                            <select class="opt form-control">
+                                <option>O</option>
+                                <option>A+</option>
+                                <option>A</option>
+                                <option>B+</option>
+                                <option>B</option>
+                                <option>C</option>
+                                <option>P</option>
+                                <option>F</option>
+                                <option>Ab</option>
+                                <option>I</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <!-- Row 9 -->
+                    <tr>
+                        <td><label for="cr9">9.</label></td>
+                        <td><input type="number" class="cred form-control" id="cr9" min=1></td>
+                        <td>
+                            <select class="opt form-control">
+                                <option>O</option>
+                                <option>A+</option>
+                                <option>A</option>
+                                <option>B+</option>
+                                <option>B</option>
+                                <option>C</option>
+                                <option>P</option>
+                                <option>F</option>
+                                <option>Ab</option>
+                                <option>I</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <!-- Row 10 -->
+                    <tr>
+                        <td><label for="cr10">10.</label></td>
+                        <td><input type="number" class="cred form-control" id="cr10" min=1></td>
+                        <td>
+                            <select class="opt form-control">
+                                <option>O</option>
+                                <option>A+</option>
+                                <option>A</option>
+                                <option>B+</option>
+                                <option>B</option>
+                                <option>C</option>
+                                <option>P</option>
+                                <option>F</option>
+                                <option>Ab</option>
+                                <option>I</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <!-- Row 11 -->
+                    <tr>
+                        <td><label for="cr11">11.</label></td>
+                        <td><input type="number" class="cred form-control" id="cr11" min=1></td>
+                        <td>
+                            <select class="opt form-control">
+                                <option>O</option>
+                                <option>A+</option>
+                                <option>A</option>
+                                <option>B+</option>
+                                <option>B</option>
+                                <option>C</option>
+                                <option>P</option>
+                                <option>F</option>
+                                <option>Ab</option>
+                                <option>I</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <div class="row">
+                <div class="col-md-6">
+                    <button class="btn" id="more" onclick="addmore()">Add Course</button>
+                </div>
+                <div class="col-md-6 submitbtn">
+                    <input type="button" value="Submit" class="btn" id="go" onclick="calculate()">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <footer>
+                <div class="foot">
+                    <h4 class="text-center " style="font-size: 1.5em; font-weight: bold;">Created by- <a href="https://www.linkedin.com/in/sudhanshu0299/" style="color: white;">Sudhanshu</a></h4>
+                </div>
+
+            </footer> -->
+
+</body>
+
+</html>
